@@ -6,5 +6,9 @@ urlpatterns = [
     #path('january', views.january),
     #path('february', views.febraury),
     #path('march', views.march),
-    path('<month>', views.monthly_challenge)
+    
+    # Order Is Differnce So must to be care
+    path("<int:month>", views.monthly_challenge_by_number),
+    path('<str:month>', views.monthly_challenge),
+    
 ]

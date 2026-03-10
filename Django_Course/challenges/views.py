@@ -13,6 +13,9 @@ def febraury(request):
 def march(request):
     return HttpResponse("Learn Django for at least 20 minutes every day!")
 
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
+
 def monthly_challenge(request, month):
     challenge_text = None
     if month == 'january':
